@@ -1,12 +1,7 @@
 import argparse
-import csv
-import functools
-import imghdr
 import logging
 import os
-import re
 
-from datetime import datetime
 from html.parser import HTMLParser
 from logging.config import dictConfig
 from urllib.parse import urljoin
@@ -14,7 +9,6 @@ from urllib.parse import urlparse
 from urllib.request import urlretrieve
 
 import requests
-
 
 
 class HtmlParser(HTMLParser):
@@ -83,16 +77,9 @@ def downloadimages():
     LOGGING = {
         'version': 1,
         'disable_existing_loggers': False,
-        # 'formatters': {
-        #     'json': {
-        #         'format': '%(asctime)s %(levelname)s %(message)s %(lineno)d %(pathname)s %(name)s',
-        #         'class': 'statfi.logging.formatter.JsonFormatter',
-        #     }
-        # },
         'handlers': {
             'console': {
                 'class': 'logging.StreamHandler',
-                # 'formatter': 'json',
             },
         },
         'loggers': {

@@ -13,3 +13,7 @@ Example::
 
    mkdir -p ~/Downloads/varjo
    ./bin/downloadimages -u https://varjo.com/ -p ~/Downloads/varjo
+
+Running the test::
+
+   ./bin/python setup.py test
